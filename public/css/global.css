@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.custom-radio input {
+    margin:0;
+    padding:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.custom-radio > label > span {
+    font-size: 24px;
+    /*display: inline-block;*/
+    /*width: 64px;*/
+    /*height: 64px;*/
+    /*background: green;*/
+}
+.custom-radio > input:checked + label>span {
+    color: green;
+}
+.custom-radio > input:checked + label>span.replaced {
+    color: green;
+}
+
+.custom-radio > input:checked + label>span.adjusted {
+    color: green;
+}
+
+.custom-radio > input:checked + label>span.ok {
+    color: green;
+}
+
+table.pdi-table {
+    width: 100%;
+}
+
+table.pdi-table th {
+
+    text-align: center;
+}
+
+table.pdi-table th,
+table.pdi-table td {
+    text-align: center;
+    max-width: 10px;
+}
+
+table.pdi-table th:first-of-type,
+table.pdi-table td:first-of-type {
+    /*padding-right: 30px;*/
+    /*max-width: 1px;*/
+    text-align: left;
+}
+
+table.pdi-table tr.remarks-row td {
+    padding-bottom: 20px;
+}
+
