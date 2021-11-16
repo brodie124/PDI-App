@@ -24,7 +24,7 @@ class PdiController extends Controller
      */
     public function create()
     {
-        return view('home')->with('pdi_checks', PDI::PDI_ITEMS);
+        return view('create_pdi')->with('pdi_checks', PDI::PDI_ITEMS);
     }
 
     /**
@@ -35,7 +35,16 @@ class PdiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validation = [
+            'asset_code' => 'required'
+        ];
+
+        foreach(PDI::PDI_ITEMS as $slug => $item) {
+            $validation[$slug] = 'required|in:unfixed,replaced,adjusted,ok';
+        }
+
+        $request->validate($validation);
+
     }
 
     /**
