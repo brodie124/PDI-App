@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChecklistController;
 use App\Http\Controllers\PdiController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/pdi', PdiController::class);
+
+ROute::resource('/admin/checklists', ChecklistController::class);
