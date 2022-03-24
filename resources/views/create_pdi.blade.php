@@ -62,7 +62,7 @@
     </div>
     @endif
 
-    <form method="post" id="pdi-form" action="{{ action('App\Http\Controllers\PdiController@store') }}">
+    <form method="post" id="pdi-form" action="{{ route('App\Http\Controllers\PdiController@store') }}">
         @csrf
 
         <input type="hidden" name="signature" id="signature" />

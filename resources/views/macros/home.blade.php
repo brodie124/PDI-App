@@ -19,7 +19,7 @@
 
 @endsection
 
-@yield('body');
+@yield('body')
 
 </body>
 </html>

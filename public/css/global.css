@@ -6,6 +6,10 @@ html, body {
     height: 100%;
 }
 
+.template-item {
+    display: none;
+}
+
 .custom-radio input {
     margin:0;
     padding:0;

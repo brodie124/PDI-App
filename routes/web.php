@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AssetController;
 use App\Http\Controllers\ChecklistController;
 use App\Http\Controllers\PdiController;
+use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +23,6 @@ Route::get('/', function () {
 
 Route::resource('/pdi', PdiController::class);
 
-ROute::resource('/admin/checklists', ChecklistController::class);
+Route::resource('/admin/checklists', ChecklistController::class);
+Route::resource('/admin/people', PersonController::class);
+Route::resource('/admin/assets', AssetController::class);

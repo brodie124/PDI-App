@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Checklist;
+use App\Models\ChecklistItem;
 use Illuminate\Http\Request;
 
 class ChecklistController extends Controller
@@ -36,7 +37,22 @@ class ChecklistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $validated = $request->validate([
+            'name' => 'required|unique:checklists|max:255',
+            'checklist-item.*.description' => 'required|max:1024',
+            'checklist-item.*.type' => 'required|'
+        ]);
+
+        $checklist = new Checklist();
+        $checklist->name = $validated['name'];
+
+        foreach($validated['checklist-item'] as $validatedItem) {
+            $checklistItem = new ChecklistItem();
+            $checklistItem->description = $validatedItem['description'];
+
+        }
     }
 
     /**
